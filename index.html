@@ -11,41 +11,47 @@
     <!-- Safiro Fonts via @font-face -->
     <style>
         @font-face {
-            font-family: 'Safiro-Regular';
-            src: url('Safiro-Regular.ttf') format('truetype');
+            font-family: 'Safiro';
+            src: url('Safiro-Regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
         }
         @font-face {
-            font-family: 'Safiro-Bold';
-            src: url('Safiro-Bold.ttf') format('truetype');
+            font-family: 'Safiro';
+            src: url('Safiro-Bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
         }
         @font-face {
-            font-family: 'Safiro-SemiBold';
-            src: url('Safiro-SemiBold.ttf') format('truetype');
+            font-family: 'Safiro';
+            src: url('Safiro-SemiBold.otf') format('opentype');
+            font-weight: 600;
+            font-style: normal;
         }
         @font-face {
-            font-family: 'Safiro-Medium';
-            src: url('Safiro-Medium.ttf') format('truetype');
+            font-family: 'Safiro';
+            src: url('Safiro-Medium.otf') format('opentype');
+            font-weight: 500;
+            font-style: normal;
         }
 
-        /* Algemene stijl */
         body {
-            font-family: 'Safiro-Regular', sans-serif;
+            font-family: 'Safiro', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #EDF3F9; /* Zig-lichtblauw */
+            background-color: #EDF3F9;
             display: flex;
             height: 100vh;
             overflow-x: hidden;
         }
 
-        /* Linker afbeelding */
+        /* Left fixed image */
         .image-section {
             position: fixed;
             top: 0;
             left: 0;
             width: 50%;
             height: 100vh;
-            object-fit: cover;
         }
 
         .image-section img {
@@ -54,7 +60,7 @@
             object-fit: cover;
         }
 
-        /* Rechter content */
+        /* Right content */
         .content-section {
             margin-left: 50%;
             padding: 20px;
@@ -66,15 +72,15 @@
         }
 
         h1 {
-            font-family: 'Safiro-Bold', sans-serif;
-            color: #1F59FF; /* Zig-blauw */
+            font-weight: 700;
+            color: #1F59FF;
             margin-bottom: 20px;
         }
 
         .theme-header {
-            font-family: 'Safiro-SemiBold', sans-serif;
+            font-weight: 600;
             font-size: 1.5em;
-            color: #0000D0; /* Donkerblauw */
+            color: #0000D0;
             margin-bottom: 15px;
         }
 
@@ -89,9 +95,83 @@
         }
 
         .button {
-            font-family: 'Safiro-Medium', sans-serif;
-            background-color: #0000D0; /* Donkerblauw */
+            font-weight: 500;
+            background-color: #0000D0;
             color: white;
             padding: 15px 30px;
             text-decoration: none;
-            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #00D0FF;
+        }
+
+        .copyright {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            color: #0000D0;
+            font-size: 1em;
+            font-weight: 400;
+        }
+
+        /* Zig-logo rechtsonder */
+        .logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 120px; /* Pas grootte aan indien nodig */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Left Image Section -->
+    <div class="image-section">
+        <img src="homepagefoto.jpeg" alt="Hoofdpagina foto">
+    </div>
+
+    <!-- Right Content Section -->
+    <div class="content-section">
+        <h1>Toolbox</h1>
+
+        <!-- Theme 1 -->
+        <div class="section">
+            <h2 class="theme-header">Discovering your qualities and goals</h2>
+            <div class="button-container">
+                <a class="button" href="https://dutchfurtive.github.io/Qualitygame/">Quality Game</a>
+                <a class="button" href="https://dutchfurtive.github.io/Corequalities/">Core Qualities</a>
+                <a class="button" href="https://dutchfurtive.github.io/PersonalDevelopmentPlan/">Personal Development Plan</a>
+            </div>
+        </div>
+
+        <!-- Theme 2 -->
+        <div class="section">
+            <h2 class="theme-header">A look at your life</h2>
+            <div class="button-container">
+                <a class="button" href="https://dutchfurtive.github.io/Wheeloflife/">Wheel of Life</a>
+            </div>
+        </div>
+
+        <!-- Theme 3 -->
+        <div class="section">
+            <h2 class="theme-header">Cultural differences</h2>
+            <div class="button-container">
+                <a class="button" href="https://dutchfurtive.github.io/CountryComparison/">Country Comparison</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        © Tim Vos
+    </div>
+
+    <!-- Zig-logo -->
+    <img src="logo.png" alt="Zig Logo" class="logo">
+
+</body>
